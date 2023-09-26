@@ -1,3 +1,8 @@
+.content {
+    display: flex;
+    align-items: center;
+}
+
 .itemContent {
     display: flex;
 }
