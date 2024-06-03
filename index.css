@@ -39,8 +39,10 @@
 
 
     font-family: 'Martian Mono', monospace;
-    --color-fg: #111;
-    --color-bg: #ececec;
+    --color-bg: #111;
+    --color-fg: #ececec;
+    --color-nti1: #f00;
+    --color-nti2: #0f0;
     --color-text-highlight: #8d8d8d;
     --color-primary: hsl(0, 50%, 40%);
     --color-primary-highlight: hsl(0, 70%, 50%);
@@ -54,22 +56,38 @@
 
 body {
     width: 100%;
-    height: 100%;
-
+    height: auto;
+    overflow: scroll;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
 
-    background-color: var(--color-bg, white);
-    color: var(--color-fg, black);
+    background-image: linear-gradient(00deg, var(--color-nti1), var(--color-nti2));
+    color: var(--color-bg, black);
+    margin: 0;
 }
 
+.content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.me {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    color: var(--color-fg);
+
+    background-image: linear-gradient(90deg, var(--color-bg)70%, #ffffff00);
+}
 
 .projectList {
     list-style: none;
     padding: 0%;
-
-
 }
 
 .itemList {
@@ -86,6 +104,14 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.itemcontent>p {
+    padding-bottom: 0px;
+}
+
+#intinorConfigurator {
+    text-decoration: line-through;
 }
 
 h1 {
